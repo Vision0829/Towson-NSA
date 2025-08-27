@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -158,6 +157,267 @@ main {
     right: 2rem;
     width: 180px;
     z-index: 100;
+}
+
+/* Mobile responsiveness for Nepal Time Widget */
+@media (max-width: 768px) {
+    .nepal-time-widget {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        order: 1 !important;
+        display: block !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
+        padding: 0.3rem 1rem !important;
+        z-index: auto !important;
+    }
+    
+    .nepal-time-widget .time-header {
+        display: none;
+    }
+    
+    .nepal-time-widget .time-display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0;
+    }
+    
+    .nepal-time-widget .current-time {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+        font-weight: 700;
+    }
+    
+    .nepal-time-widget .current-date {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+    
+    .nepal-time-widget .time-zone {
+        display: none;
+    }
+    
+    #home .container {
+        flex-direction: column;
+        display: flex;
+    }
+    
+    .nepal-time-widget {
+        order: 2;
+        margin: 0.3rem 0 0.3rem 0;
+    }
+    
+    #home .content-left {
+        order: 3;
+        text-align: center;
+    }
+    
+    #home .content-right {
+        order: 4;
+        margin-top: 1rem;
+    }
+    
+    /* Override the huge margins that are causing spacing issues */
+    #home .main-title {
+        margin-bottom: 0.3rem !important;
+    }
+    
+    #home .subtitle {
+        margin-bottom: 0.3rem !important;
+    }
+    
+    .hero-image {
+        text-align: center;
+    }
+    
+    .hero-img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Fix container padding on mobile */
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* Fix news updates section padding */
+    .news-updates-container {
+        padding: 0 1rem;
+    }
+    
+    /* Make updates grid single column on mobile */
+    .updates-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Fix image grid for mobile */
+    .image-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* Adjust section padding for mobile */
+    .section {
+        padding: 3rem 0;
+    }
+    
+    /* Fix navigation container padding */
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    /* Make facts grid single column on mobile */
+    .facts-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Adjust font sizes for mobile */
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Additional mobile optimizations */
+    .quick-facts-section {
+        margin: 2rem 0;
+    }
+    
+    .fact-card {
+        padding: 1rem;
+    }
+    
+    .nepal-highlights {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .mission-vision {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .eboard-carousel {
+        padding: 0 1rem;
+    }
+    
+    .carousel-slide {
+        padding: 1rem;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .nepal-time-widget {
+        padding: 0.2rem 0.8rem;
+        max-width: none;
+        order: 2;
+        margin: 0.2rem 0 0.2rem 0;
+    }
+    
+    /* Override margins for extra small mobile too */
+    #home .main-title {
+        margin-bottom: 0.2rem !important;
+    }
+    
+    #home .subtitle {
+        margin-bottom: 0.2rem !important;
+    }
+    
+    .nepal-time-widget .current-time {
+        font-size: 1rem;
+    }
+    
+    .nepal-time-widget .current-date {
+        font-size: 0.8rem;
+    }
+    
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .container {
+        padding: 0 0.8rem;
+    }
+    
+    .nav-container {
+        padding: 0 0.8rem;
+    }
+    
+    /* Fix any remaining right-side spacing issues */
+    .news-updates-container {
+        padding: 0 0.8rem;
+    }
+    
+    .updates-grid {
+        gap: 1rem;
+    }
+    
+    .image-grid {
+        gap: 0.8rem;
+    }
+    
+    .fact-card {
+        padding: 0.8rem;
+    }
+    
+    .eboard-carousel {
+        padding: 0 0.8rem;
+    }
+    
+    .carousel-slide {
+        padding: 0.8rem;
+    }
+    
+    .contact-info {
+        gap: 1rem;
+    }
+    
+    .footer-content {
+        gap: 1.5rem;
+    }
 }
 
 
