@@ -241,10 +241,41 @@ main {
     /* Override the huge margins that are causing spacing issues */
     #home .main-title {
         margin-bottom: 0.3rem !important;
+        font-size: 1.5rem;
+        line-height: 1.2;
     }
     
     #home .subtitle {
         margin-bottom: 0.3rem !important;
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+    
+    /* Make home section more compact for mobile */
+    #home .description {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+    }
+    
+    #home .cta-buttons {
+        gap: 0.5rem;
+    }
+    
+    #home .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Reduce hero image size on mobile */
+    #home .hero-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    #home .hero-img {
+        max-width: 100%;
+        height: auto;
     }
     
     .hero-image {
@@ -354,16 +385,22 @@ main {
     
     /* Adjust font sizes for mobile */
     .main-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
     }
     
     .subtitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
     }
     
     .section-title {
         font-size: 1.8rem;
     }
+    
+
     
     /* Additional mobile optimizations */
     .quick-facts-section {
