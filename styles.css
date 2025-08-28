@@ -182,7 +182,6 @@ main {
         right: auto !important;
         width: 100% !important;
         max-width: none !important;
-        margin: 0 !important;
         order: 1 !important;
         display: block !important;
         border-radius: 0 !important;
@@ -234,14 +233,15 @@ main {
         text-align: center;
     }
     
-    .nepal-time-widget {
+    /* Override the universal CSS reset with more specific selectors */
+    body .nepal-time-widget {
         order: 2;
-        margin: 0.3rem 0 0.3rem 0;
+        margin: 4rem 0 5rem 0 !important;
         width: 100%;
         max-width: 100%;
     }
     
-    #home .content-left {
+    body #home .content-left {
         order: 3;
         text-align: center;
         width: 100%;
@@ -251,11 +251,12 @@ main {
         align-items: center;
         justify-content: center;
         margin: 0 auto;
+        margin-top: 3rem !important;
     }
     
-    #home .content-right {
+    body #home .content-right {
         order: 4;
-        margin-top: 1rem;
+        margin-top: 5rem !important;
         width: 100%;
         max-width: 100%;
         display: flex;
