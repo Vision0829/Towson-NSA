@@ -229,6 +229,9 @@ main {
         max-width: 100%;
         overflow: hidden;
         padding: 0 0.5rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
     
     .nepal-time-widget {
@@ -243,6 +246,11 @@ main {
         text-align: center;
         width: 100%;
         max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
     }
     
     #home .content-right {
@@ -250,6 +258,9 @@ main {
         margin-top: 1rem;
         width: 100%;
         max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     /* Override the huge margins that are causing spacing issues */
@@ -401,39 +412,44 @@ main {
         padding: 0 1rem;
     }
     
-    /* Mobile navigation menu */
+    /* Mobile navigation menu - force dropdown behavior */
     .hamburger {
-        display: flex;
+        display: flex !important;
     }
     
     .nav-menu {
-        position: fixed;
-        top: -100%;
-        left: 0;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 2rem 0;
-        gap: 1.5rem;
-        z-index: 1000;
+        position: fixed !important;
+        top: -100vh !important;
+        left: 0 !important;
+        right: 0 !important;
+        flex-direction: column !important;
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px) !important;
+        width: 100% !important;
+        text-align: center !important;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05) !important;
+        padding: 1rem 0 !important;
+        gap: 0.8rem !important;
+        z-index: 1000 !important;
+        transform: translateY(-100%) !important;
+        max-height: 50vh !important;
+        overflow: hidden !important;
     }
     
     .nav-menu.active {
-        top: 70px;
+        top: 70px !important;
+        transform: translateY(0) !important;
     }
     
     .nav-item {
-        margin: 0;
+        margin: 0 !important;
     }
     
     .nav-link {
-        font-size: 1.1rem;
-        padding: 0.5rem 0;
-        display: block;
+        font-size: 0.9rem !important;
+        padding: 0.3rem 0 !important;
+        display: block !important;
     }
     
     /* Make facts grid single column on mobile */
@@ -1505,7 +1521,7 @@ main {
     }
     
     .eboard-member {
-        height: 400px;
+        height: 450px;
         width: 100%;
         max-width: 85vw;
         margin: 0 auto;
@@ -1526,6 +1542,22 @@ main {
     .member-info {
         max-width: 85vw;
         padding: 0.8rem;
+        text-align: center;
+    }
+    
+    .member-info h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+        word-wrap: break-word;
+    }
+    
+    .member-info p {
+        font-size: 0.9rem;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+        word-wrap: break-word;
+        max-width: 100%;
     }
     
     /* Ensure e-board carousel is centered - use !important to override conflicts */
@@ -1564,16 +1596,37 @@ main {
         overflow-x: hidden !important;
     }
     
-    /* Force home section to be centered */
+    /* Force home section to be centered - same as working sections */
     #home .container {
         text-align: center !important;
         max-width: 100% !important;
         overflow: hidden !important;
+        align-items: center !important;
+        justify-content: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        margin: 0 auto !important;
     }
     
     #home .content-left {
         max-width: 100% !important;
         overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+    
+    /* Apply the same centering that works for other sections */
+    #home {
+        text-align: center !important;
+    }
+    
+    #home * {
+        text-align: center !important;
     }
 }
 
