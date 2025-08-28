@@ -408,8 +408,8 @@ main {
     
     .nav-menu {
         position: fixed;
-        left: -100%;
-        top: 70px;
+        top: -100%;
+        left: 0;
         flex-direction: column;
         background-color: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
@@ -419,10 +419,11 @@ main {
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
         gap: 1.5rem;
+        z-index: 1000;
     }
     
     .nav-menu.active {
-        left: 0;
+        top: 70px;
     }
     
     .nav-item {
@@ -1533,12 +1534,38 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow: hidden;
     }
     
     .carousel-wrapper {
         width: 100%;
-        max-width: 85vw;
+        max-width: 80vw;
         margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    /* Force all e-board content to be centered and constrained */
+    .eboard-carousel * {
+        max-width: 80vw;
+        box-sizing: border-box;
+    }
+    
+    /* Ensure no horizontal overflow anywhere */
+    .section, .container, .content-left, .content-right, .content-center {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    /* Force home section to be centered */
+    #home .container {
+        text-align: center;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    #home .content-left {
+        max-width: 100%;
+        overflow: hidden;
     }
 }
 
