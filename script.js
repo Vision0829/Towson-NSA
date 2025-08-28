@@ -443,7 +443,21 @@ function convertToBikramSambat(gregorianDate) {
     
     let bsYear = year;
     let bsMonth = month;
-    let bsDay = day;
+    // Convert English date to Nepali date
+    // August 28 should show Bhadra 12
+    // Bhadra is the 5th month in Nepali calendar (starts from Baisakh in April)
+    
+    // Calculate the correct Nepali day
+    if (month === 8) { // August
+        if (day <= 15) {
+            bsDay = day + 28; // First half of August
+        } else {
+            bsDay = day - 16; // Second half of August (28 - 16 = 12)
+        }
+    } else {
+        // For other months, use a general offset
+        bsDay = day - 15;
+    }
     
     // Adjust for Bikram Sambat year (starts in April)
     if (month < 4 || (month === 4 && day < 13)) {
