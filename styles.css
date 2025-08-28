@@ -310,6 +310,11 @@ main {
         box-sizing: border-box;
     }
     
+    /* Center the home content on mobile */
+    #home .container {
+        text-align: center;
+    }
+    
     /* Fix news updates section padding */
     .news-updates-container {
         padding: 0 0.5rem;
