@@ -129,6 +129,7 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .bar {
@@ -137,6 +138,19 @@ body {
     background: #333;
     margin: 3px 0;
     transition: 0.3s;
+}
+
+/* Hamburger menu active state */
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Main Content */
@@ -385,6 +399,40 @@ main {
     /* Fix navigation container padding */
     .nav-container {
         padding: 0 1rem;
+    }
+    
+    /* Mobile navigation menu */
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        gap: 1.5rem;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: 0;
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+        display: block;
     }
     
     /* Make facts grid single column on mobile */
@@ -1443,28 +1491,30 @@ main {
     }
     
     .carousel-slide {
-        width: 90vw;
-        max-width: 320px;
+        width: 85vw;
+        max-width: 300px;
     }
     
     .carousel-slide.prev {
-        transform: scale(0.8) translateX(-25vw);
+        transform: scale(0.8) translateX(-20vw);
     }
     
     .carousel-slide.next {
-        transform: scale(0.8) translateX(25vw);
+        transform: scale(0.8) translateX(20vw);
     }
     
     .eboard-member {
         height: 400px;
         width: 100%;
+        max-width: 85vw;
+        margin: 0 auto;
     }
     
     .member-photo {
-        width: 80vw;
-        max-width: 220px;
-        height: 220px;
-        font-size: 4.5rem;
+        width: 75vw;
+        max-width: 200px;
+        height: 200px;
+        font-size: 4rem;
     }
     
     .position-title {
@@ -1473,8 +1523,22 @@ main {
     }
     
     .member-info {
-        max-width: 90vw;
+        max-width: 85vw;
         padding: 0.8rem;
+    }
+    
+    /* Ensure e-board carousel is centered */
+    .eboard-carousel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .carousel-wrapper {
+        width: 100%;
+        max-width: 85vw;
+        margin: 0 auto;
     }
 }
 
