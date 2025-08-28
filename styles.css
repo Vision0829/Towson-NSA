@@ -1508,54 +1508,58 @@ main {
     }
     
     .carousel-slide {
-        width: 85vw;
-        max-width: 300px;
+        width: 90vw;
+        max-width: 320px;
     }
     
     .carousel-slide.prev {
-        transform: scale(0.8) translateX(-20vw);
+        transform: scale(0.7) translateX(-25vw);
+        opacity: 0.2;
     }
     
     .carousel-slide.next {
-        transform: scale(0.8) translateX(20vw);
+        transform: scale(0.7) translateX(25vw);
+        opacity: 0.2;
     }
     
     .eboard-member {
-        height: 450px;
+        height: 500px;
         width: 100%;
         max-width: 85vw;
         margin: 0 auto;
     }
     
     .member-photo {
-        width: 75vw;
-        max-width: 200px;
-        height: 200px;
-        font-size: 4rem;
+        width: 70vw;
+        max-width: 180px;
+        height: 180px;
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
     }
     
     .position-title {
         font-size: 1rem;
-        margin-bottom: 0.8rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.3;
     }
     
     .member-info {
         max-width: 85vw;
-        padding: 0.8rem;
+        padding: 1.2rem;
         text-align: center;
     }
     
     .member-info h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
-        line-height: 1.2;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
         word-wrap: break-word;
     }
     
     .member-info p {
-        font-size: 0.9rem;
-        line-height: 1.3;
-        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
         word-wrap: break-word;
         max-width: 100%;
     }
