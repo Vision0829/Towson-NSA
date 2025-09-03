@@ -240,7 +240,7 @@ main {
     /* Override the universal CSS reset with more specific selectors */
     body .nepal-time-widget {
         order: 2;
-        margin: 4rem 0 5rem 0 !important;
+        margin: 2rem 0 3rem 0 !important;
         width: 100%;
         max-width: 100%;
     }
@@ -268,19 +268,27 @@ main {
         align-items: center;
     }
     
-    /* Override the huge margins that are causing spacing issues */
+    /* Add more spacing between top sections on mobile */
     #home .main-title {
-        margin-bottom: 0.8rem !important;
+        margin-bottom: 1.5rem !important;
         font-size: 1.3rem;
         line-height: 1.2;
         text-align: center;
     }
     
     #home .subtitle {
-        margin-bottom: 0.8rem !important;
+        margin-bottom: 1.5rem !important;
         font-size: 1rem;
         line-height: 1.2;
         text-align: center;
+    }
+    
+    #home .description {
+        margin-bottom: 2rem !important;
+    }
+    
+    #home .cta-buttons {
+        margin-bottom: 2rem !important;
     }
     
     /* Make home section more compact for mobile */
@@ -393,6 +401,16 @@ main {
     .eboard-member, .member-photo, .carousel-slide {
         max-width: 100vw;
         box-sizing: border-box;
+    }
+    
+    /* Force highlights section to be visible on mobile */
+    #events .highlights-section,
+    .highlights-section {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 1 !important;
     }
     
     /* Make updates grid single column on mobile */
@@ -590,12 +608,36 @@ main {
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
+        margin-top: 3rem !important;
+        padding: 2rem 0 !important;
     }
     
     .highlights-grid {
         display: grid !important;
         visibility: visible !important;
         opacity: 1 !important;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+        gap: 1.5rem !important;
+        padding: 0 1rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .highlight-image-container {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .highlight-img {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        height: 200px !important;
+        object-fit: cover !important;
     }
     
     .updates-grid {
@@ -2525,18 +2567,23 @@ main {
 /* Mobile Responsiveness for Highlights */
 @media (max-width: 768px) {
     .highlights-section {
-        margin-top: 2rem !important;
-        padding: 1rem 0 !important;
+        margin-top: 3rem !important;
+        padding: 2rem 0 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .highlights-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
         gap: 1.5rem !important;
         padding: 0 1rem !important;
         display: grid !important;
         width: 100% !important;
         max-width: 100% !important;
-        overflow: hidden !important;
+        overflow: visible !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .highlight-image-container {
@@ -2544,18 +2591,27 @@ main {
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .highlight-img {
-        height: 180px !important;
+        height: 200px !important;
         width: 100% !important;
         max-width: 100% !important;
         object-fit: cover !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .highlights-title {
         font-size: 1.5rem !important;
         margin-bottom: 1.5rem !important;
         text-align: center !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 } 
