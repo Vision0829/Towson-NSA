@@ -40,6 +40,8 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    position: relative;
+    z-index: 1001;
 }
 
 .nav-logo {
@@ -129,7 +131,9 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1002;
+    position: relative;
+    padding: 0.5rem;
 }
 
 .bar {
@@ -416,11 +420,13 @@ main {
     /* Mobile navigation menu - force dropdown behavior */
     .hamburger {
         display: flex !important;
+        position: relative !important;
+        z-index: 1001 !important;
     }
     
     .nav-menu {
         position: fixed !important;
-        top: -100vh !important;
+        top: 70px !important;
         left: 0 !important;
         right: 0 !important;
         flex-direction: column !important;
@@ -428,7 +434,7 @@ main {
         backdrop-filter: blur(10px) !important;
         width: 100% !important;
         text-align: center !important;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        transition: all 0.3s ease !important;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05) !important;
         padding: 1rem 0 !important;
         gap: 0.8rem !important;
@@ -436,11 +442,14 @@ main {
         transform: translateY(-100%) !important;
         max-height: 50vh !important;
         overflow: hidden !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
     }
     
     .nav-menu.active {
-        top: 70px !important;
         transform: translateY(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .nav-item {
@@ -574,6 +583,19 @@ main {
     /* Fix any remaining right-side spacing issues */
     .news-updates-container {
         padding: 0 0.3rem;
+    }
+    
+    /* Ensure highlights section is visible on mobile */
+    .highlights-section {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .highlights-grid {
+        display: grid !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .updates-grid {
@@ -1026,6 +1048,12 @@ main {
     object-fit: contain;
     transition: transform 0.3s ease;
     margin-left: auto;
+}
+
+/* Make Nepal flag background transparent */
+.hero-img[src="nepalflag.png"] {
+    background: transparent;
+    mix-blend-mode: multiply;
 }
 
 .hero-img:hover, .about-img:hover, .eboard-img:hover, .events-img:hover, .contact-img:hover {
@@ -2496,22 +2524,38 @@ main {
 
 /* Mobile Responsiveness for Highlights */
 @media (max-width: 768px) {
+    .highlights-section {
+        margin-top: 2rem !important;
+        padding: 1rem 0 !important;
+    }
+    
     .highlights-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-        padding: 0 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+        gap: 1.5rem !important;
+        padding: 0 1rem !important;
+        display: grid !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
     }
     
     .highlight-image-container {
-        padding: 0.8rem;
+        padding: 0.8rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
     
     .highlight-img {
-        height: 180px;
+        height: 180px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        object-fit: cover !important;
     }
     
     .highlights-title {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+        text-align: center !important;
     }
 } 
