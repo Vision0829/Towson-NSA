@@ -2538,6 +2538,9 @@ main {
 .highlights-section {
     margin-top: 3rem;
     padding: 2rem 0;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .highlights-title {
@@ -2559,22 +2562,37 @@ main {
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /* Desktop/tablet layout: 7 images as 3-2-2, centered */
 @media (min-width: 769px) {
+    #events .highlights-section {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-top: 3rem !important;
+        padding: 2rem 0 !important;
+    }
+    
     #events .highlights-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        justify-content: center;
-        max-width: 1100px;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 2rem !important;
+        justify-content: center !important;
+        max-width: 1100px !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     /* Default to 3 per row */
     #events .highlight-image-container {
-        flex: 1 1 calc((100% - 4rem) / 3);
-        max-width: calc((100% - 4rem) / 3);
+        flex: 1 1 calc((100% - 4rem) / 3) !important;
+        max-width: calc((100% - 4rem) / 3) !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     /* Force rows 2 and 3 to be 2 items (3-2-2) */
@@ -2582,8 +2600,17 @@ main {
     #events .highlight-image-container:nth-child(5),
     #events .highlight-image-container:nth-child(6),
     #events .highlight-image-container:nth-child(7) {
-        flex: 1 1 calc((100% - 2rem) / 2);
-        max-width: calc((100% - 2rem) / 2);
+        flex: 1 1 calc((100% - 2rem) / 2) !important;
+        max-width: calc((100% - 2rem) / 2) !important;
+    }
+    
+    #events .highlight-img {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        height: 200px !important;
+        object-fit: cover !important;
     }
 }
 
@@ -2595,6 +2622,9 @@ main {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .highlight-image-container:hover {
@@ -2608,6 +2638,9 @@ main {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1rem;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /* Move first 3 images up to show more of the top */
